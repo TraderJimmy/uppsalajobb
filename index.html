@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Företagslista Uppsala</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f4f4f4; }
+    #login, #content { max-width: 900px; margin: auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.6rem; text-align: left; }
+    th { background: #0073aa; color: white; }
+  </style>
+</head>
+<body>
+<div id="login">
+  <h2>Logga in för att se listan</h2>
+  <input type="password" id="password" placeholder="Lösenord" />
+  <button onclick="checkPassword()">Logga in</button>
+  <p id="error" style="color: red;"></p>
+</div>
+<div id="content" style="display: none;">
+  <h2>Företagslista Uppsala</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Företag</th>
+        <th>Kategori</th>
+        <th>Adress</th>
+        <th>Telefon</th>
+        <th>E-post</th>
+        <th>Hemsida</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Made AB</td><td>Byggentreprenad</td><td>Arkgatan 1, 754 50 Uppsala</td><td>018-400 650</td><td>info@madeab.se</td><td><a href='https://www.madeab.se' target='_blank'>madeab.se</a></td></tr>
+<tr><td>Bravida Uppsala</td><td>Fastighetsskötsel</td><td>Verkstadsgatan 11, 753 23 Uppsala</td><td>018-65 00 00</td><td></td><td><a href='https://www.bravida.se/kontakt/sverige/uppsala' target='_blank'>bravida.se/kontakt/sverige/uppsala</a></td></tr>
+<tr><td>CMW Bygg AB</td><td>Byggfirma</td><td>Uppsala</td><td>018-265 0060</td><td>info@cmwbygg.se</td><td><a href='https://cmwbygg.se' target='_blank'>cmwbygg.se</a></td></tr>
+<tr><td>HZ Bygg AB</td><td>Byggentreprenad</td><td>Verkstadsgatan 10, 753 23 Uppsala</td><td>018-538 346</td><td>info@hzbygg.se</td><td><a href='https://www.hzbygg.se' target='_blank'>hzbygg.se</a></td></tr>
+<tr><td>Upplands Energi</td><td>Energibolag</td><td>Arkgatan 1, 754 50 Uppsala</td><td>018-678 400</td><td>info@upplandsenergi.se</td><td><a href='https://www.upplandsenergi.se' target='_blank'>upplandsenergi.se</a></td></tr>
+<tr><td>Turn Energy</td><td>Energibolag</td><td>Kastgatan 3B, 756 46 Uppsala</td><td>018-888 0000</td><td>info@turnenergy.com</td><td><a href='https://www.turnenergy.com' target='_blank'>turnenergy.com</a></td></tr>
+<tr><td>Svevia AB</td><td>Vägunderhåll</td><td>Vallongatan 2, 752 15 Uppsala</td><td>018-32 61 97</td><td>info@svevia.se</td><td><a href='https://www.svevia.se' target='_blank'>svevia.se</a></td></tr>
+    </tbody>
+  </table>
+</div>
+<script>
+  const correctPassword = "uppsala2024";
+  function checkPassword() {
+    const input = document.getElementById("password").value;
+    if (input === correctPassword) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    } else {
+      document.getElementById("error").textContent = "Fel lösenord, försök igen.";
+    }
+  }
+</script>
+</body>
+</html>
